@@ -505,8 +505,8 @@ time.post-date {
     margin-left: -48px;
 }
 .button {
-    /*width: 100%;*/
-    width: 270px;
+    width: 100%;
+   /* width: 270px;*/
     height: 48px;
     border: none;
     padding: 18px 80px;
@@ -606,7 +606,7 @@ time.post-date {
         margin-right: auto;
         padding: 20px;
        /* background: antiquewhite;*/
-        flex-grow: 1;
+
     }
     .product {
        /* width: 32%;*/
@@ -828,6 +828,9 @@ footer {
     margin-top: 30px;
     padding: 50px 30px;
 }
+.popup-wrapper .button {
+    width: 100%;
+}
 
 .form-group {
     display: block;
@@ -852,6 +855,10 @@ footer {
     color: #000000;
     opacity: 0.54;
 }
+textarea.field {
+    box-sizing: content-box;
+}
+
 .field-label {
     font-size: 13px;
     line-height: normal;/*line-height:40px*/
