@@ -317,11 +317,12 @@ html {
     .products {
        /* position: relative;*/
         display: flex;
-       /* align-items: center;*/
-        justify-content: center;
-        flex-wrap: wrap;
+       /*align-items: center;*/
+       justify-content: center;
+       flex-wrap: wrap;
+       /* max-width: 700px;*/
        /*max-width: 1199px;*/
-       /* min-width: 700px;*/
+       /*min-width: 700px;*/
 
         /*height: 455px;*/
         /* max-height: 100%;*/
@@ -332,22 +333,23 @@ html {
 
         padding: 20px;
         /* background: antiquewhite;*/
-
+        text-align: center;
 
     }
-    .products .article.product:nth-child(3) {
-    /*align-self: flex-start;*/
-        justify-self: flex-start;
-    }
+
 
     .product:nth-child(3n) {
         margin-top: 50px;
+        margin-left: 0;
+        margin-right: 40.5% ;
+
        /* position: absolute;
         top: 70%;
         left: 70%;*/
 
 
     }
+
     .product {
         box-sizing: border-box;
         /* width: 32%;*/
