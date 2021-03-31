@@ -23,6 +23,8 @@ html {
 }
     .header {
         background-image: url("../images/banner-bg.jpg");
+        padding-bottom: 8.125rem;/*130px;*/
+        padding-top: 1.5625rem;/*25px;*/
     }
 
     .header-container {
@@ -73,7 +75,14 @@ html {
         line-height: 4.6875rem; /*75px*/
         padding: 0;
     }
-
+    .header-logo {
+        width: 100%;
+        max-width: 11.25rem;/*180px;*/
+        /*padding: 0;*/
+        max-height: 2.5rem;/*40px;*/
+        height: 100%;
+        margin-top: 0;
+    }
     nav .menu__button {
         display: none;
     }
@@ -84,10 +93,21 @@ html {
         height: 100%;
         margin-right: 2px;
         margin-left: 2px;
+
         /*padding: 0 20px 14px 20px;*/
     }
+
     .trends-articles {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
         height: 320px;/*320px;*/
+        /*height: 100%;*/
+        /*height: 20rem;/*320px;*/*/
+        /* max-width: 412px;
+         max-height: 320px;*/
+        /* padding-bottom: 14px;*/
     }
 
     main {
@@ -124,6 +144,15 @@ html {
         font-family: Open Sans, Arial, sans-serif;
         font-weight: 400;
         font-style: normal;
+    }
+    aside {
+        display: block;
+        width: 100%;
+        max-width: 270px;
+        margin-left: 120px;
+        margin-right: 245px;
+        height: 100%;
+        /*  min-height: 1709px;*/
     }
 
     .products {
@@ -165,23 +194,65 @@ html {
         min-height: 200px;
         /* height: 100%;*/
     }
+    footer {
+        display: block;
+        /* background-color: red;*/
+        vertical-align: middle;
+        /* margin-left: 245px;*/
+        /* margin-top: 63px;*/
+        margin: 0 auto 2.5rem;
+        /* margin-right: 245px;*/
+        /*margin-bottom: 40px;*/
+        width: 100%;
+        max-width: 1170px; /*было просто width*/
+        text-align: center;
+    }
 
+    .container-footer {
+        box-sizing: border-box;
+        /* width: 1170px;*/
+        max-width: 1170px;
+        /* height: 83px;*/
+        height: 5.1875rem;
+        /* padding-top: 29.5px;
+         padding-bottom: 29.5px;*/
+        padding-top: 1.84375rem;
+        padding-bottom: 1.84375rem;
+        background-color: #f5f7f6;
+    }
+    .button {
+        width: 100%;
+        /* width: 270px;*/
+        height: 48px;
+        border: none;
+        padding: 18px 80px;
+        color: #ffffff;
+        background-color: #cc9966;
+        font-size: 0.875rem; /*14px;*/
+        margin-top: 16px;
+        text-transform: uppercase;
+        font-family: Open Sans, Arial, sans-serif;
+        font-weight: 700;
+        font-style: bold;
+    }
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 641px) and (max-width: 1199px), (max-width: 360px) and (orientation:landscape) {
 html {
     font-size: 85%;/*62.5%; 10px*/
 }
     .header {
         background-image: url("../images/banner-bg-tablet.jpg");
+        width: 100%;
     }
     .header-container {
         box-sizing: border-box;
         /*145- 15=130 от низа шрифта дониза шапки с учетом межстрочного расстояния*/
         width: 100%;
-        max-width: 700px;
+        /*max-width: 85%;*//* max-width: 700px;было*/
         margin-left: auto;
         margin-right: auto;
+        padding: 5%;
     }
 
     .header-content {
@@ -192,7 +263,7 @@ html {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        max-width: 700px;
+       /* max-width: 85%;*//*  max-width: 700px было, а может max-width: 641px;или  85-90% задать*/
         margin-top: 0;
         margin-bottom: 0;
         margin-left: auto;
@@ -208,11 +279,19 @@ html {
         margin-bottom: 0;
         padding-left: 1.5rem;
         padding-right: 1.5rem;/*примерно*/
-        margin-top: 6.875rem;/*110px;*/
+        margin-top: calc(6.875rem - 5%);/*110px;*/
         margin-left: 0;
         margin-right: 0;
     }
+    .header-logo {
+        width: 100%;
+        max-width: 11.25rem;/*180px;*/
+        /*padding: 0;*/
+        max-height: 2.5rem;/*40px;*/
+        height: 100%;
+        margin-top: 0;
 
+    }
     nav .menu-list {
         display: none;
     }
@@ -252,9 +331,9 @@ html {
         /*height: 100%;*/
         padding: 0;
     }
-    .article-img {
+    .article-img, .product-img {
         box-sizing: border-box;
-        min-width: 100%;
+        width: 100%;
     }
 
     .article-content {
@@ -266,6 +345,18 @@ html {
         font-weight: 400;
         font-style: normal;
     }
+    aside {
+        display: block;
+        width: 100%;
+        max-width: 270px;
+        margin-left: 120px;
+        margin-right: 245px;
+        height: 100%;
+        /*  min-height: 1709px;*/
+    }
+    /*aside.news .field, .form-group {
+        width: 100%;
+    }*/
 
     .trends-articles {
         display: flex;
@@ -330,26 +421,22 @@ html {
         box-sizing: border-box;
         margin-left: auto;
         margin-right: auto;
-
-        padding: 20px;
+        padding: 5%;/*1.25rem;*//*20px;*/
         /* background: antiquewhite;*/
         text-align: center;
-
     }
-
 
     .product:nth-child(3n) {
         margin-top: 50px;
         margin-left: 0;
-        margin-right: 40.5% ;
-
-       /* position: absolute;
-        top: 70%;
-        left: 70%;*/
-
-
+        margin-right: 48.5% ;
     }
-
+    .product:nth-child(1) {
+        margin-right: 4% ;
+    }
+    .product:nth-child(2) {
+        margin-left: 4%;
+    }
     .product {
         box-sizing: border-box;
         /* width: 32%;*/
@@ -391,13 +478,220 @@ html {
        /* min-height: 225px;*/
         /* height: 100%;*/
     }
+    footer.footer {
+        display: block;
+        /*background-color: red;*/
+        vertical-align: middle;
+        margin: 0 auto 2.5rem;
+        width: 85.5%;
+        /*было просто width*/
+        text-align: center;
+    }
 
+    footer.container-footer {
+        box-sizing: border-box;
+        /* width: 1170px;*/
+
+        /* height: 83px;*/
+        height: 5.1875rem;
+        /* padding-top: 29.5px;
+         padding-bottom: 29.5px;*/
+        padding-top: 1.84375rem;
+        padding-bottom: 1.84375rem;
+        background-color: #f5f7f6;
+    }
 
 }
 
-@media (max-width: 767px) {
+@media (max-width: 640px) {
     html {
         font-size: 50%; /*8px*/
+    }
+    .header {
+        background-image: url("../images/banner-mobile.jpg");
+        padding-bottom: 5%;/*8.125rem;*//*130px;*/
+        padding-top: 5%;/*1.5625rem;*//*25px;*/
+        width: 100vw;
+        box-sizing: border-box;
+        height: 100vmax;
+    }
+    .header-content {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 85%;
+        /* max-width: 85%;*//*  max-width: 700px было, а может max-width: 641px;или  85-90% задать*/
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 0;
+    }
+
+    .header-title-container {
+        width: 100vw;
+        box-sizing: border-box;
+        height: 100vh;
+        margin-bottom: 0;
+        padding-left: 7.5%;
+        padding-right: 7.5%;/*примерно*/
+        margin-top: 6%;/*110px;*/
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .header-content {
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 0;
+    }
+
+    .header-logo {
+        width: 85%;
+        max-width: 85%;/*180px;*/
+        /*padding: 0;*/
+       /* max-height: 2.5rem;*//*40px;*/
+        height: 100%;
+        margin-top: 0;
+       /* padding-bottom: 8.125rem;*//*130px;*/
+        padding-top: 45%;/*25px;*/
+
+    }
+    nav .menu-list {
+        display: none;
+    }
+    nav .menu, .js-menu {
+        align-self: flex-end;
+        margin-right: 2.5%;
+    }
+    .trends-articles {
+        flex-direction: column;
+    }
+    .trends-article:nth-child(n + 2) {
+        margin-top: 2px;
+    }
+    .news-section {
+        flex-direction: column;
+        /*align-item: center;*/
+        /* padding: 63px 0 0 0;*/
+        margin: 0 2.5%;
+    }
+    .articles .article {
+        flex-direction: column;
+        padding-bottom: 20px;
+        border-bottom: 2px solid /*red*/#f5f7f6;
+    }
+    .aside {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .products {
+        /* position: relative;*/
+        display: flex;
+        /*align-items: center;*/
+        justify-content: center;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        margin: 5%;/*1.25rem;*//*20px;*/
+        /* background: antiquewhite;*/
+        text-align: center;
+
+    }
+
+    .product:nth-child(n+2) {
+        margin-top: 50px;
+    }
+    /*.product:nth-child(1) {
+        margin-right: 4% ;
+    }
+    .product:nth-child(2) {
+        margin-left: 4%;
+    }*/
+    .product {
+        box-sizing: border-box;
+        width: 85.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .product-body {
+        /* height: 210px;*/
+        max-width: 284px;
+        max-height: 284px;
+        box-sizing: border-box;
+        text-align: left;
+        font-family: Open Sans, Arial, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 0.9375rem; /*15px;*/
+        outline: 3px solid #cc9966;
+        outline-offset: 20px;
+        padding-top: 25px;
+        padding-bottom: 5px;
+        /*flex-grow: 1;*/
+        /*border: 3px solid #ffffff;*/
+    }
+
+    /*.product .product-body {
+        align-self: flex-start;
+    }*/
+    .product-imgbox {
+        box-sizing: border-box;
+        width: 100%;
+        /*max-width: 284px;*/
+        /* min-height: 225px;*/
+        /* height: 100%;*/
+    }
+
+    footer.footer {
+        display: block;
+        background-color: red;
+        vertical-align: middle;
+        margin: 0 auto 2.5rem;
+        width: 90%;
+        max-width: 90%; /*было просто width*/
+        text-align: center;
+    }
+
+    footer.container-footer {
+        box-sizing: border-box;
+        /* width: 1170px;*/
+        max-width: 90%;
+        /* height: 83px;*/
+        height: 5.1875rem;
+        /* padding-top: 29.5px;
+         padding-bottom: 29.5px;*/
+        padding-top: 1.84375rem;
+        padding-bottom: 1.84375rem;
+        background-color: #f5f7f6;
+        text-align: center;
+    }
+    .popup .button{
+        padding: 0;
+        height: 3rem;
+    }
+    .popup .textarea {
+        min-width: 0;
+        min-height: 0;
+    }
+    .popup .field {
+        min-height: 0;
+    }
+    .popup .search-button {
+        height: 3rem;
     }
 }
 
@@ -410,12 +704,11 @@ html {
         background-size: cover;
         width: 100%;
         /* max-width: 1660px;*/
-        height: 100%;
         position: relative;
         z-index: 0;
         margin: 0 auto;
-        padding-bottom: 8.125rem;/*130px;*/
-        padding-top: 1.5625rem;/*25px;*/
+      /*  padding-bottom: 8.125rem;*//*130px;*/
+        /*padding-top: 1.5625rem;*//*25px;*/
         text-align: center;
     }
 
@@ -456,15 +749,13 @@ html {
         z-index: 0;
     }
 
-    .header-logo {
+    /*.header-logo {
         width: 100%;
-        max-width: 11.25rem;/*180px;*/
-        /*padding: 0;*/
-        max-height: 2.5rem;/*40px;*/
+        max-width: 11.25rem;
+        max-height: 2.5rem;
         height: 100%;
         margin-top: 0;
-
-    }
+    }*/
 
     .menu-list {
         display: flex;
@@ -581,7 +872,7 @@ html {
     .trends-articles {
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+       /* align-items: flex-end;*/
         width: 100%;
         /*height: 100%;*/
         /*height: 20rem;/*320px;*/*/
@@ -607,8 +898,9 @@ html {
        /* max-width: 25%;*/
        /* height: 100%;*/
 
-        margin-right: 2px;
-        margin-left: 2px;
+       /* margin-right: 2px;
+        margin-left: 2px;*/
+
         /*padding: 0 20px 14px 20px;*/
     }
 
@@ -725,7 +1017,10 @@ html {
         height: 100%;
         padding: 0px;
     }
-
+.article-img, .product-img {
+    box-sizing: border-box;
+    width: 100%;
+}
     .article-content {
         box-sizing: border-box;
        /* width: 24.6875rem;*//*395px;*/
@@ -810,15 +1105,15 @@ html {
     }
 
     /*конеw */
-    aside {
+   /* aside {
         display: block;
         width: 100%;
         max-width: 270px;
         margin-left: 120px;
         margin-right: 245px;
         height: 100%;
-        /*  min-height: 1709px;*/
-    }
+
+    }*//*  min-height: 1709px;*/
 
     .news {
         display: block;
@@ -880,7 +1175,6 @@ html {
     .new-posts {
         display: flex;
         flex-wrap: nowrap;
-
     }
 
     .post-preview {
@@ -895,7 +1189,7 @@ html {
 
     .post-content {
         box-sizing: border-box;
-        width: 200px;
+        width: 100%;/*200px;было декстоп*/
         padding: 0 0 0 20px;
         text-align: left;
         /* vertical-align: top;*/
@@ -968,7 +1262,7 @@ html {
     .field {
         box-sizing: border-box;
         width: 270px; /*width: 100%;*/
-        height: 48px;
+        height: 48px; /*height: 48px;*/
         /* border: 1px solid #cc9966;*/
         border: none;
         background-color: #f5f7f6;
@@ -1000,9 +1294,11 @@ html {
     .button {
         width: 100%;
         /* width: 270px;*/
+        /*height: 3rem;*/
         height: 48px;
         border: none;
-        padding: 18px 80px;
+        padding: 1.125rem 5rem;
+        /*padding: 18px 80px;*/
         color: #ffffff;
         background-color: #cc9966;
         font-size: 0.875rem; /*14px;*/
@@ -1047,7 +1343,7 @@ html {
 
     .categories {
         display: block;
-        margin-top: 0px;
+        margin-top: 0;
         text-align: left;
     }
 
@@ -1147,8 +1443,10 @@ html {
 
     }*/
     .product-footer .button {
-        width: calc(50% - 10px);
-        padding: 18px 28px;
+        /*width: calc(50% - 10px);*/
+        width: 50%;
+       /* padding: 18px 28px;*/
+        padding: 1.125rem 1rem;
         margin: 0;
     }
 
@@ -1175,7 +1473,7 @@ html {
         text-decoration: underline;
     }
 
-    /*  footer */
+    /*----------------footer общее--------------*/
     footer {
         display: block;
         /* background-color: red;*/
@@ -1185,15 +1483,15 @@ html {
         margin: 0 auto 2.5rem;
         /* margin-right: 245px;*/
         /*margin-bottom: 40px;*/
-        width: 100%;
-        max-width: 1170px; /*было просто width*/
+       /* width: 100%;
+        max-width: 1170px; *//*было просто width*/
         text-align: center;
     }
 
     .container-footer {
         box-sizing: border-box;
        /* width: 1170px;*/
-        max-width: 1170px;
+       /* max-width: 1170px;*/
        /* height: 83px;*/
         height: 5.1875rem;
        /* padding-top: 29.5px;
