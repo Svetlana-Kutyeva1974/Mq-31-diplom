@@ -571,7 +571,7 @@ html {
         height: 100%;
         margin-top: 0;
        /* padding-bottom: 8.125rem;*//*130px;*/
-        padding-top: 45%;/*25px;*/
+        padding-top: 35%;/*25px;*/
 
     }
     nav .menu-list {
@@ -604,16 +604,18 @@ html {
         padding-bottom: 20px;
         border-bottom: 2px solid /*red*/#f5f7f6;
     }
-    .aside {
+    aside {
         display: flex;
         flex-direction: column;
     }
     aside label.form-group, aside input.field {
         width: 100%;
     }
+    aside.news {
+        margin-top: 5%;
+    }
 
     .products {
-        /* position: relative;*/
         display: flex;
         /*align-items: center;*/
         justify-content: center;
@@ -661,9 +663,7 @@ html {
         /*flex-grow: 1;*/
         /*border: 3px solid #ffffff;*/
     }
-
-    /*.product .product-body {
-        align-self: flex-start;
+    /*.product .product-body { align-self: flex-start;
     }*/
     .product-imgbox {
         box-sizing: border-box;
@@ -675,18 +675,18 @@ html {
 
     footer.footer {
         display: block;
-       /* background-color: red;*/
+        /*background-color: red;*/
         vertical-align: middle;
         margin: 0 7.5% 2.5rem;
         width: 85%;
-        max-width: 85%; /*было просто width*/
+       /* max-width: 85%;*/ /*было просто width*/
         text-align: center;
     }
 
     footer.container-footer {
         box-sizing: border-box;
         /* width: 1170px;*/
-        max-width: 85%;
+       /* max-width: 85%;*/
         /* height: 83px;*/
         height: 5.1875rem;
         /* padding-top: 29.5px;
