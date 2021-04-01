@@ -242,7 +242,7 @@ html {
     }
 }
 
-@media (min-width: 641px) and (max-width: 1199px), (max-width: 360px) and (orientation:landscape) {
+@media (min-width: 641px) and (max-width: 1199px), (max-width: 360px) and (orientation: landscape) {
 html {
     font-size: 85%;/*62.5%; 10px*/
 }
@@ -607,6 +607,9 @@ html {
     .aside {
         display: flex;
         flex-direction: column;
+    }
+    aside label.form-group, aside input.field {
+        width: 100%;
     }
 
     .products {
