@@ -44,10 +44,11 @@ html {
         align-items: center;
         width: 100%;
         max-width: 1170px;
-        margin-top: 0;
+        margin: 0 auto;
+        /*margin-top: 0;
         margin-bottom: 0;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: auto;*/
         z-index: 0;
     }
 
@@ -104,7 +105,7 @@ html {
         width: 100%;
         height: 320px;/*320px;*/
         /*height: 100%;*/
-        /*height: 20rem;/*320px;*/*/
+        /*height: 20rem;320px;*/
         /* max-width: 412px;
          max-height: 320px;*/
         /* padding-bottom: 14px;*/
@@ -133,7 +134,7 @@ html {
         width: 23.75rem;/*381px;*/
         min-height: 18.1875rem;/*291px;*/
         height: 100%;
-        padding: 0px;
+        padding: 0;
     }
 
     .article-content {
@@ -235,6 +236,9 @@ html {
         font-weight: 700;
         font-style: bold;
     }
+    .popup .field-group, textarea.field.textarea {
+        min-width: calc(330px - 10px);
+    }
 }
 
 @media (min-width: 641px) and (max-width: 1199px), (max-width: 360px) and (orientation:landscape) {
@@ -264,10 +268,7 @@ html {
         align-items: center;
         width: 100%;
        /* max-width: 85%;*//*  max-width: 700px было, а может max-width: 641px;или  85-90% задать*/
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
         z-index: 0;
     }
 
@@ -393,10 +394,7 @@ html {
         max-width: 49.5%;
         height: 245px;
        /* max-height: 100%;*/
-        margin-right: 2px;
-        margin-left: 2px;
-        margin-top: 2px;
-        margin-bottom: 2px;
+        margin: 2px;
         /*padding: 0 20px 14px 20px;*/
     }
 
@@ -507,6 +505,9 @@ html {
         background-color: #f5f7f6;
         text-align: center;
     }
+    .popup textarea.field.textarea {
+        min-width: 0;
+    }
 
 }
 
@@ -531,10 +532,7 @@ html {
         align-items: center;
         width: 85%;
         /* max-width: 85%;*//*  max-width: 700px было, а может max-width: 641px;или  85-90% задать*/
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
         z-index: 0;
     }
 
@@ -695,16 +693,17 @@ html {
     }
     .popup .textarea {
         min-width: 0;
-        min-height: 0;
     }
     .popup .field {
-        min-height: 0;
+        min-height: 100px;
     }
     .popup .search-button {
         height: 3rem;
     }
+    .popup .field-group {
+        width: 100%;
+    }
 }
-
 /*---------------------------------------Общие стили--------------------------------*/
     .header {
        /* background-image: url("../images/banner-bg.jpg");*/
@@ -734,30 +733,22 @@ html {
         z-index: -1;
     }
 
-    /*.header-container {
-        box-sizing: border-box;
-        /*145- 15=130 от низа шрифта дониза шапки с учетом межстрочного расстояния*/
-        width: 100%;
-        max-width: 1170px;
-        margin-left: auto;
-        margin-right: auto;
-    }*/
-
-    .header-content {
+    /*.header-content {
         position: relative;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
+        width: 100%;*/
      /*   max-width: 1170px;*/
-        margin-top: 0;
+        /*margin-top: 0;
         margin-bottom: 0;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: auto;*/
+/*
         z-index: 0;
-    }
+    }*/
 
     /*.header-logo {
         width: 100%;
@@ -852,7 +843,7 @@ html {
         margin-bottom: 0;
       /*  padding-left: 15rem;
         padding-right: 15rem;240px;
-        margin-top: 6.875rem;110px;*/*/
+        margin-top: 6.875rem;110px;*/
         margin-left: auto;
         margin-right: auto;
     }
@@ -885,7 +876,7 @@ html {
        /* align-items: flex-end;*/
         width: 100%;
         /*height: 100%;*/
-        /*height: 20rem;/*320px;*/*/
+        /*height: 20rem;320px;*/
         /* max-width: 412px;
          max-height: 320px;*/
         /* padding-bottom: 14px;*/
@@ -1027,7 +1018,7 @@ html {
        /* width: 23.75rem;*//*381px;*/
        /* min-height: 18.1875rem;*//*291px;*/
         height: 100%;
-        padding: 0px;
+        padding: 0;
     }
 .article-img, .product-img {
     box-sizing: border-box;
@@ -1056,7 +1047,6 @@ html {
         font-weight: 700;
         font-style: bold;
     }
-
     a.teg-link {
         margin-right: 1.25rem;/*20px*/
     }
@@ -1100,7 +1090,7 @@ html {
     }
 
     .article-description .product-description {
-        font-size: 0.9375; /*15px;*/
+        font-size: 0.9375rem; /*15px;*/
         color: #000000;
         font-family: Open Sans, Arial, sans-serif;
         line-height: 1.375rem; /*22px;*/
@@ -1157,7 +1147,7 @@ html {
         text-transform: uppercase;
         font-weight: 700;
         font-style: bold;
-        margin-bottom: 1.875rem;/*30px;*/
+        margin-bottom: 1.875rem;
     }
 
     .section-title-underline::before {
@@ -1243,7 +1233,7 @@ html {
     }
 
     .new-posts:first-child {
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     .form-hint {
