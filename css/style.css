@@ -238,7 +238,7 @@ html {
         font-style: bold;
     }
     .popup .field-group, textarea.field.textarea {
-        min-width: calc(330px - 10px);
+        min-width: calc(330px + 10px);
     }
 }
 
