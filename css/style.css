@@ -72,6 +72,7 @@ html {
         line-height: 4.6875rem; /*75px*/
         padding: 0;
     }
+
     .header-logo {
         width: 100%;
         max-width: 11.25rem;/*180px;*/
@@ -85,13 +86,13 @@ html {
     }
 
     .trends-article { /*.article-content */
-        width: calc((100% - 12px) / 4 - 12);
+        width: calc((100% - 12px) / 4 - 12px);
         max-width: 25%;
        /* height: 100%;*/
         margin-right: 2px;
         margin-left: 2px;
-        height: 320px;
-
+        /*height: 320px;*/
+        min-height: 320px;
         /*padding: 0 20px 14px 20px;*/
     }
 
@@ -151,6 +152,9 @@ html {
         margin-right: 245px;
         height: 100%;
         /*  min-height: 1709px;*/
+    }
+    .trends ~ .product-trends {
+        margin-top: 0;
     }
 
     .products {
@@ -238,7 +242,7 @@ html {
     }
 }
 
-@media (min-width: 641px) and (max-width: 1199px), (max-width: 360px) and (orientation: landscape) {
+@media (min-width: 641px) and (max-width: 1199px), (max-width: 36vmax) and (orientation: landscape) {
 html {
     font-size: 85%;/*62.5%; 10px*/
 }
@@ -275,20 +279,31 @@ html {
         box-sizing: border-box;
         height: 100%;
         margin-bottom: 0;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;/*примерно*/
+       /* padding-left: 1.5rem;
+        padding-right: 1.5rem;*//*примерно*/
         margin-top: calc(6.875rem - 5%);/*110px;*/
-        margin-left: 0;
-        margin-right: 0;
+       /* margin-left: 1.5rem;
+        margin-right: 1.5rem;*/
     }
     .header-logo {
         width: 100%;
-        max-width: 11.25rem;/*180px;*/
+        max-width: 11.25rem;/*180px; 160px*/
         /*padding: 0;*/
-        max-height: 2.5rem;/*40px;*/
+        max-height: 2.5rem;/*40px; 35px*/
         height: 100%;
         margin-top: 0;
 
+    }
+
+    .header-title {
+        font-size: 2.8125rem;
+        text-transform: uppercase;
+        text-align: center;
+        color: #ffffff;
+        font-family: Open Sans, Arial, sans-serif;
+        font-weight: 700;
+        line-height: 4.6875rem; /*75px*/
+        padding: 0;
     }
     nav .menu-list {
         display: none;
@@ -389,7 +404,8 @@ html {
         /*width: 100%;*/
         /*width: calc(50% - 2px);*/
         max-width: 49.5%;
-        height: 245px;
+        /*height: 245px;*/
+        min-height: 245px;
        /* max-height: 100%;*/
         margin: 2px;
         /*padding: 0 20px 14px 20px;*/
@@ -426,6 +442,9 @@ html {
 
         /* background: antiquewhite;*/
         text-align: center;
+    }
+    .trends ~ .product-trends {
+        margin-top: 0;
     }
 
     .product:nth-child(3n) {
@@ -521,29 +540,16 @@ html {
         box-sizing: border-box;
        /* height: 100vmax;*/
     }
-    .header-content {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
-        width: 85%;
-        /* max-width: 85%;*//*  max-width: 700px было, а может max-width: 641px;или  85-90% задать*/
-        margin: 0 auto;
-        z-index: 0;
-    }
 
     .header-title-container {
         width: 100vw;
         box-sizing: border-box;
         /*height: 100vh;*/
-        margin-bottom: 0;
-        padding-left: 7.5%;
-        padding-right: 7.5%;/*примерно*/
-        margin-top: 6%;/*110px;*/
-        margin-left: 0;
-        margin-right: 0;
+        margin: 6% auto 0;
+        height: 100%;
+       /* padding-left: 7.5%;
+        padding-right: 7.5%;*//*примерно*/
+       /* margin-top: 6%;*//*110px;*/
     }
     .header-content {
         position: relative;
@@ -561,16 +567,29 @@ html {
     }
 
     .header-logo {
-        width: 85%;
-        max-width: 85%;/*180px;*/
+        width: 75%;
+        max-width: 75%;/*180px;*/
         /*padding: 0;*/
        /* max-height: 2.5rem;*//*40px;*/
         height: 100%;
-        margin-top: 0;
+        margin-top: 35%;
        /* padding-bottom: 8.125rem;*//*130px;*/
-        padding-top: 35%;/*25px;*/
-
+       /* padding-top: 35%;*//*25px;*/
     }
+
+    .header-title {
+        font-size: 2.3rem;/*26px*/
+        text-transform: uppercase;
+        text-align: center;
+        color: #ffffff;
+        font-family: Open Sans, Arial, sans-serif;
+        font-weight: 700;
+        font-style: bold;
+        line-height: 3.21rem; /*36px*/
+        margin: auto;
+        width: 75%;
+    }
+
     nav .menu-list {
         display: none;
     }
@@ -588,7 +607,8 @@ html {
     }
 
     .trends-article {
-        height: 227px;
+       /* height: 227px;*/
+        min-height: 227px;
     }
     .news-section {
         flex-direction: column;
@@ -608,9 +628,9 @@ html {
     aside label.form-group, aside input.field {
         width: 100%;
     }
-    aside.news {
+    /*aside.news {
         margin-top: 5%;
-    }
+    }*/
 
     .products {
         display: flex;
@@ -774,8 +794,8 @@ html {
 
     .menu-list-item {
         vertical-align: middle;
-        margin-left: 1.125rem;/*18px;*/
-        margin-right: 1.126rem;/*18px;*/
+        /*margin-left: 1.125rem;18px;*/
+        margin-right: 2.25rem;/*36px;*/
     }
 
     .menu-list-item:last-child {
@@ -843,20 +863,17 @@ html {
     outline: -webkit-focus-ring-color auto 1px;
 }
 
-    .header-title-container {
+   /* .header-title-container {
         width: 100%;
         box-sizing: border-box;
         height: 100%;
         margin-bottom: 0;
-      /*  padding-left: 15rem;
-        padding-right: 15rem;240px;
-        margin-top: 6.875rem;110px;*/
         margin-left: auto;
         margin-right: auto;
-    }
+    }*/
 
-    .header-title {
-        /* font-size: 45px;*/
+    /*.header-title {
+
         font-size: 2.8125rem;
         text-transform: uppercase;
         text-align: center;
@@ -864,9 +881,9 @@ html {
         font-family: Open Sans, Arial, sans-serif;
         font-weight: 700;
         font-style: bold;
-        line-height: 4.6875rem; /*75px*/
+        line-height: 4.6875rem;
         padding: 0;
-    }
+    }*/
 
     /*Trends styles*/
     .trends {
@@ -987,6 +1004,9 @@ html {
     .trends-article-content .teg-link {
         vertical-align: bottom;
     }
+.trends ~ .product-trends {
+    margin-top: 0;
+}
 
     /*.trends .section-title-underline {
         font-size: 20px;
@@ -1023,6 +1043,10 @@ html {
         display: flex;
         /*flex-wrap: nowrap;*/
 
+    }
+    .articles {
+        /*margin-bottom: 3.9375rem;*/
+        margin-bottom: 3.75rem;
     }
 
     .article-preview {
@@ -1364,7 +1388,7 @@ html {
     .categories-items {
         display: flex;
         width: 100%;
-        max-width: 271px;
+        /*max-width: 271px;*/
         border-bottom: 2px solid #f5f7f6;
     }
 
@@ -1404,14 +1428,12 @@ html {
 
 
     .product-footer {
-        border-top: 1px solid #f0f0f0;
-        padding-top: 20px;
+       /* padding-top: 20px;*/
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        margin: auto;
-
+        margin: 20px auto;
     }
 
     .product-imgbox {
